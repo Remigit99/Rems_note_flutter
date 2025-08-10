@@ -6,6 +6,7 @@ class CustomInput extends StatelessWidget {
   final Widget? inputSuffixIcon;
   final TextEditingController inputTextController;
   final TextInputType? inputKeyboardType;
+  final bool inputObscureText;
 
   const CustomInput({
     super.key,
@@ -14,11 +15,13 @@ class CustomInput extends StatelessWidget {
     this.inputSuffixIcon,
     this.inputKeyboardType,
     required this.inputTextController,
+    required this.inputObscureText,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      obscureText: inputObscureText,
       keyboardType: inputKeyboardType,
       controller: inputTextController,
       decoration: InputDecoration(

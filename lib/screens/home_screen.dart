@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
-import "package:note_app_flutter/screens/create_note.dart";
+// import "package:note_app_flutter/screens/create_note.dart";
+import "package:note_app_flutter/screens/login_screen.dart";
 // import "package:note_app_flutter/screens/create_note.dart";
 import "package:note_app_flutter/utilis/custom_input.dart";
 
@@ -25,6 +26,7 @@ class HomeScreen extends StatelessWidget {
                 inputHintText: "Search notes",
                 inputPrefixIcon: Icon(Icons.search),
                 inputTextController: TextEditingController(),
+                inputObscureText: false,
               ),
               const SizedBox(height: 20),
 
@@ -80,7 +82,7 @@ class HomeScreen extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => CreateNoteScreen()),
+              MaterialPageRoute(builder: (context) => LoginScreen()),
             );
           },
           child: Icon(Icons.add),
